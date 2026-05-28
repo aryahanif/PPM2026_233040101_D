@@ -13,14 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            'Halo, Flutter!',
-            style: TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
+          title: const Text('Hello Flutter'),
           backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
         ),
@@ -28,11 +21,16 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('\u{1F44B}', style: TextStyle(fontSize: 64)),
+              const Text('👋', style: TextStyle(fontSize: 64)),
               const SizedBox(height: 16),
               const Text(
-                'Halo, Hanif!',
+                'Halo, Nama Anda!',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              const Text(
+                'Selamat datang di dunia Flutter.',
+                style: TextStyle(fontSize: 14, color: Colors.grey),
               ),
               const SizedBox(height: 24),
               Container(
@@ -46,28 +44,18 @@ class MyApp extends StatelessWidget {
                 child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('NIM: 233040101', style: TextStyle(fontSize: 16)),
+                    Text('NIM: 123456789', style: TextStyle(fontSize: 16)),
                     SizedBox(height: 4),
-                    Text(
-                      'Prodi: Teknik Informatika',
-                      style: TextStyle(fontSize: 16),
-                    ),
+                    Text('Prodi: Teknik Informatika', style: TextStyle(fontSize: 16)),
                     SizedBox(height: 4),
-                    Text('Semester: 6', style: TextStyle(fontSize: 16)),
+                    Text('Semester: 5', style: TextStyle(fontSize: 16)),
                   ],
                 ),
               ),
               const SizedBox(height: 24),
               ElevatedButton(
-                onPressed: () {
-                  // Belum dipakai — akan dipelajari di praktikum berikutnya
-                },
+                onPressed: () {},
                 child: const Text('Tap Saya'),
-              ),
-
-              const Text(
-                'Selamat datang di dunia Flutter.',
-                style: TextStyle(fontSize: 14, color: Colors.grey),
               ),
             ],
           ),
