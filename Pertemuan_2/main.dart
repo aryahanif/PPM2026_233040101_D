@@ -25,10 +25,7 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Profil Saya'),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            onPressed: () {},
-          ),
+          IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
         ],
       ),
       drawer: Drawer(
@@ -43,7 +40,10 @@ class ProfilePage extends StatelessWidget {
             ),
             const ListTile(leading: Icon(Icons.home), title: Text('Beranda')),
             const ListTile(leading: Icon(Icons.person), title: Text('Profil')),
-            const ListTile(leading: Icon(Icons.settings), title: Text('Pengaturan')),
+            const ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Pengaturan'),
+            ),
             ListTile(
               leading: const Icon(Icons.widgets),
               title: const Text('Widget Gallery'),
@@ -87,16 +87,23 @@ class ProfilePage extends StatelessWidget {
             const SizedBox(height: 24),
             Row(
               children: const [
-                Expanded(child: _StatBox(label: 'Post', value: '12')),
-                Expanded(child: _StatBox(label: 'Teman', value: '128')),
-                Expanded(child: _StatBox(label: 'Like', value: '1.2K')),
+                Expanded(
+                  child: _StatBox(label: 'Post', value: '12'),
+                ),
+                Expanded(
+                  child: _StatBox(label: 'Teman', value: '128'),
+                ),
+                Expanded(
+                  child: _StatBox(label: 'Like', value: '1.2K'),
+                ),
               ],
             ),
             const SizedBox(height: 24),
             const _SectionCard(
               icon: Icons.info_outline,
               title: 'Tentang Saya',
-              content: 'Saya suka belajar hal baru, terutama yang berkaitan dengan teknologi dan pengembangan aplikasi mobile.',
+              content:
+                  'Saya suka belajar hal baru, terutama yang berkaitan dengan teknologi dan pengembangan aplikasi mobile.',
             ),
             const _SectionCard(
               icon: Icons.school,
@@ -145,7 +152,10 @@ class _StatBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(value, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        Text(
+          value,
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
         const SizedBox(height: 4),
         Text(label, style: TextStyle(color: Colors.grey.shade600)),
       ],
@@ -178,7 +188,13 @@ class _SectionCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   const SizedBox(height: 6),
                   Text(content, style: const TextStyle(height: 1.4)),
                 ],
@@ -223,9 +239,7 @@ class GalleryHome extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (_) => CategoryPage(name: name),
-                  ),
+                  MaterialPageRoute(builder: (_) => CategoryPage(name: name)),
                 );
               },
             ),
@@ -290,14 +304,22 @@ class _DisplayDemo extends StatelessWidget {
         const Text('Divider', style: TextStyle(fontWeight: FontWeight.bold)),
         const Divider(thickness: 2),
         const SizedBox(height: 16),
-        const Text('CircleAvatar & Icon', style: TextStyle(fontWeight: FontWeight.bold)),
-        Row(children: const [
-          CircleAvatar(child: Text('A')),
-          SizedBox(width: 12),
-          CircleAvatar(backgroundColor: Colors.green, child: Icon(Icons.check)),
-          SizedBox(width: 12),
-          Icon(Icons.star, color: Colors.amber, size: 40),
-        ]),
+        const Text(
+          'CircleAvatar & Icon',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        Row(
+          children: const [
+            CircleAvatar(child: Text('A')),
+            SizedBox(width: 12),
+            CircleAvatar(
+              backgroundColor: Colors.green,
+              child: Icon(Icons.check),
+            ),
+            SizedBox(width: 12),
+            Icon(Icons.star, color: Colors.amber, size: 40),
+          ],
+        ),
       ],
     );
   }
@@ -341,17 +363,16 @@ class _InputDemoState extends State<_InputDemo> {
           onChanged: (v) => setState(() => _switched = v),
         ),
         const Text('Slider'),
-        Slider(
-          value: _slider,
-          onChanged: (v) => setState(() => _slider = v),
-        ),
+        Slider(value: _slider, onChanged: (v) => setState(() => _slider = v)),
         const SizedBox(height: 8),
         const Text('Dropdown'),
         DropdownButton<String>(
           value: _dropdown,
-          items: ['Apel', 'Jeruk', 'Mangga']
-              .map((e) => DropdownMenuItem(value: e, child: Text(e)))
-              .toList(),
+          items: [
+            'Apel',
+            'Jeruk',
+            'Mangga',
+          ].map((e) => DropdownMenuItem(value: e, child: Text(e))).toList(),
           onChanged: (v) => setState(() => _dropdown = v),
         ),
       ],
