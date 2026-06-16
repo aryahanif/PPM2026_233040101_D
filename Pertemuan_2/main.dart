@@ -41,10 +41,10 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   // ---- state yang bisa diubah lewat Edit Profile ----
   File? _profileImage;
-  String _name = 'Ilham Anugrah';
+  String _name = 'Arya Raihan Hanif';
   String _tentang =
       'Saya suka belajar hal baru, terutama yang berkaitan dengan teknologi dan pengembangan aplikasi mobile.';
-  String _pendidikan = 'Teknik Informatika - Semester 5\nIPK: 3.75';
+  String _pendidikan = 'Teknik Informatika - Semester 5\nIPK: 3.49';
   String _lokasi = 'Bandung, Jawa Barat';
   String _kontak = 'email@example.com\n+62 812-3456-7890';
   List<String> _skills = ['Flutter', 'Dart', 'Java', 'Python', 'Git'];
